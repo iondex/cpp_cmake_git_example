@@ -17,4 +17,11 @@
 * CMake相关变量
   * `PROJECT_SOURCE_DIR`：当前CMake工程的总目录，是`CMakeLists.txt`所在目录。
   * `CMAKE_BINARY_DIR`：生成的Binary所在的目录，是`cmake`命令运行的目录。
-  * `PROJECT_BINARY_DIR`：
+* 添加源文件：
+  * 使用`set(SOURCES src/main.cpp src/Hello.cpp)`将源文件赋给变量`SOURCES`（需要包含Binary用到的所有源文件）
+  * 使用`file(GLOB SOURCES /src/*.cpp)`进行GLOB操作，将源文件列表赋给变量`SOURCES`。
+* 添加Include路径：`target_include_directories`
+  * 第一个参数为Binary名称，第二个参数为路径。第二个参数前需要添加Scope修饰符。
+  * 注意这个命令需要在`add_executable`之前。
+
+

@@ -1,3 +1,6 @@
 [submodule "external/dbg"]
 	path = external/dbg
 	url = https://github.com/sharkdp/dbg-macro
+[submodule "external/Catch2"]
+	path = external/Catch2
+	url = https://github.com/catchorg/Catch2/
